@@ -12,7 +12,7 @@ export default function PokeCard(props) {
   }, [props.name])
 
   return (
-    <Link to={'/pokemon'}>
+    <Link to={`/pokemon/${pokemon.name}`}>
       <img
         src={pokemon.sprites?.other['official-artwork'].front_default}
         alt=''

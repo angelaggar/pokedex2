@@ -5,6 +5,7 @@ export default function Home() {
     <main>
       <header>Pokedex</header>
       <nav>
+        <Link to={'/'}>Home</Link>
         <Link to={'/pokemon'}>Pokemons</Link>
       </nav>
       <section>

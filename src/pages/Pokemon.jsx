@@ -5,7 +5,7 @@ export default function Pokemon() {
   const [pokemons, setPokemons] = useState([])
 
   useEffect(() => {
-    fetch('https://pokeapi.co/api/v2/pokemon?limit=5')
+    fetch('https://pokeapi.co/api/v2/pokemon?limit=50')
       .then((res) => res.json())
       .then((data) => setPokemons(data.results))
       .catch((err) => {
@@ -17,7 +17,7 @@ export default function Pokemon() {
     <>
       <h1>Pókedex</h1>
       {pokemons.map((poke, index) => {
-        return <PokeCard key={index} name={poke.name} url={poke.url} />
+        return <PokeCard key={index} name={poke.name} />
       })}
     </>
   )
