@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import {} from 'react'
 import { useParams } from 'react-router-dom'
 
 export default function PokeDetails() {
@@ -9,7 +8,10 @@ export default function PokeDetails() {
   useEffect(() => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${params.name}`)
       .then((res) => res.json())
-      .then((data) => setPokemon(data))
+      .then((data) => {
+        setPokemon(data)
+        console.log(data)
+      })
       .then()
       .catch((err) => console.log('Unable to get information', err))
   }, [params.name])
