@@ -2,7 +2,7 @@ import { Link, Outlet } from 'react-router-dom'
 
 export default function Home() {
   return (
-    <main className='bg-cover bg-[url("https://i.pinimg.com/564x/a7/98/77/a79877fdb26b3a8af2a1a42605c6ce38.jpg")]'>
+    <main className='bg-cover bg-[url("https://i.pinimg.com/564x/a7/98/77/a79877fdb26b3a8af2a1a42605c6ce38.jpg")] min-h-screen'>
       <header className='w-full p-4 bg-red-600 flex justify-center'>
         <Link to={'/'}>
           <img
